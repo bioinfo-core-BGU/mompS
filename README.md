@@ -3,7 +3,7 @@
 Welcome to mompS tool's documentation!
 ====================================================
 
-**Software author**: Dr. Michal Gordon
+**Software author**: Dr. Michal Gordon, Bioinformatics Core Facility, Ben-Gurion University
 
 **PI**: Prof. Jacob Moran-Gilad
 
