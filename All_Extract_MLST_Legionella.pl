@@ -10,7 +10,6 @@ GetOptions
 	"a=s"=>\$assembly_fasta # asembly genome 
 	);
 #This script combine the mompS pipe and the MLST of the rest 6 genes
-exit();
 
 my $output_blast = $outputpath.$prefix.".BLAST_res.txt";
 my $output_MLST = $outputpath.$prefix.".MLST_res.txt";
