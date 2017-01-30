@@ -1,4 +1,4 @@
-![Image of NIBN](https://github.com/gordonmi/mompS/Doc/source/_static/NIBN_logo.png)
+![Image of NIBN](Doc/source/_static/NIBN_logo.png)
 ====================================================
 Welcome to mompS tool's documentation!
 ====================================================
