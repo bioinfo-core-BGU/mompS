@@ -1,11 +1,10 @@
 #!/usr/bin/perl
 
-###### Print USAGE if no argument is given
-#my $usage = "\nUSAGE: Extract_concensus_based_on_filter_and_unfilter_vcf.pl <input_reference_fasta_file> <input_unfilter_vcf_file> <input_filter_vcf_file>
+#USAGE: Extract_concensus_based_on_filter_and_unfilter_vcf.pl <input_reference_fasta_file> <input_unfilter_vcf_file> <input_filter_vcf_file>
 
 ###### Get the arguments:  
-my $input_reference_fasta_file = shift; # or die $usage;
-my $input_unfilter_vcf_file = shift; # or die $usage;
+my $input_reference_fasta_file = shift; 
+my $input_unfilter_vcf_file = shift; 
 my $input_filter_vcf_file = shift;
 my $input_bam_file = shift;
 my $input_filetr_bam_file = shift;
@@ -29,7 +28,6 @@ open (RES, ">$output_ST") or die;
 open (FASTA, ">$output_fasta") or die;
 
 #check for regunes without reads mapping coverage at the non-filter bam fila
-#my $pnd '$samtools_path/samtools depth -a -r Paris_mompS_R:367-718 $input_bam_file | grep "0$" | wc -l';
 my $any_cov_nonfiletr = qx($samtools_path/samtools depth -a -r Paris_mompS_R:367-718 $input_bam_file);
 my $num_of_zero_nonfiletr = qx($samtools_path/samtools depth -a -r Paris_mompS_R:367-718 $input_bam_file | grep '\\s0\$' | wc -l );
 my $num_of_one_nonfiletr = qx($samtools_path/samtools depth -a -r Paris_mompS_R:367-718 $input_bam_file | grep '\\s1\$' | wc -l );

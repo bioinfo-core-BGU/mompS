@@ -22,7 +22,7 @@ my $config = <CONFIG>;
 my ($blast_path) = $config =~ /blast_path\s*=\s*(.*?)\n/;
 open (RES, ">$log") or die;
 #call the mompS pipe
-`perl mompS_2_pipe_new.pl $reads_F $reads_R $prefix $outputpath`;
+`perl mompS_2_pipe.pl $reads_F $reads_R $prefix $outputpath`;
 open (mompS,$outputpath.$prefix.".consensus.ST_MompS_res.txt") or die;
 local $/;
 my $mompS_res = <mompS>;
@@ -36,5 +36,5 @@ print RES "$blast_path/makeblastdb -in $assembly_fasta -dbtype nucl\n";
 `$blast_path/blastn -query MLST_Representative_Legionella.fasta -db $assembly_fasta -outfmt "6 qseqid sallseqid qlen slen qstart qend sstart send length evalue bitscore score pident qframe" -out $output_blast`;
 print RES "$blast_path/blastn -query MLST_Representative_Legionella.fasta -db $assembly_fasta -outfmt 6 qseqid sallseqid qlen slen qstart qend sstart send length evalue bitscore score pident qframe -out $output_blast\n";
 #call the MLST pipe
-`perl Extract_MLST_Legionella_new_mompS.pl $assembly_fasta $output_blast $mompS_ST $output_MLST`;
+`perl Extract_MLST_Legionella_mompS.pl $assembly_fasta $output_blast $mompS_ST $output_MLST`;
 print RES "perl Extract_MLST_Legionella_new_mompS.pl $assembly_fasta $output_blast $mompS_ST $output_MLST\n";

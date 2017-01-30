@@ -24,7 +24,7 @@ Usage
 4. cd into the momps folder
 5. Run the program as follows::
 
-    perl All_Extract_MLST_Legionella.pl   \
+    perl momps.pl   \
         -f forward_fastq_file.fq   \
         -r reverse_fastq_file.fq   \
         -a assembly_file.fasta   \

@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 
-#my $input_fq_file = shift;
 my $input_file = shift;
 
 my $fasta_file = $input_file.".fasta";
@@ -22,7 +21,7 @@ if ($no_coverage_flag eq ""){
 
 	`$blast_path/makeblastdb -in $fasta_file -dbtype nucl`;  # make blastDB
 
-	#`blastn -query $query -db $fasta_file -evalue 0.0001 -outfmt 6 > $outoutFile`; # blast aginest mompS representator (1)
+	# blast aginest mompS representator (1)
 
 	`$blast_path/blastn -query $query -db $fasta_file -outfmt "6 qseqid sallseqid qlen slen qstart qend sstart send length evalue bitscore score pident qframe" -out $outoutBlastFile`;
 
