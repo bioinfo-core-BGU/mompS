@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to mompS’s documentation! &mdash; mompS 1.0 documentation</title>
+  <title>Welcome to mompS tool’s documentation! &mdash; mompS 1.0 documentation</title>
   
 
   
@@ -84,8 +84,12 @@
             
                 <!-- Local TOC -->
                 <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to mompS&#8217;s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#">Welcome to mompS tool&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#why-should-i-need-this">Why should I need this?</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
 </ul>
 </div>
             
@@ -116,7 +120,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="#">Docs</a> &raquo;</li>
       
-    <li>Welcome to mompS&#8217;s documentation!</li>
+    <li>Welcome to mompS tool&#8217;s documentation!</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -130,18 +134,72 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-momps-s-documentation">
-<h1>Welcome to mompS&#8217;s documentation!<a class="headerlink" href="#welcome-to-momps-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="section" id="welcome-to-momps-tool-s-documentation">
+<h1>Welcome to mompS tool&#8217;s documentation!<a class="headerlink" href="#welcome-to-momps-tool-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p><strong>Software author</strong>: Dr. Michal Gordon</p>
+<p><strong>PI</strong>: Prof. Jacob Moran-Gilad</p>
+<p><strong>Citation</strong>: Gordon, M., Yakunin, E., Valinsky, L., Chalifa-Caspi, V., &amp; Moran-Gilad, J. (2017). A Bioinformatics Tool for Ensuring the Backwards Compatibility of Legionella pneumophila Typing in the Genomic Era. Clinical Microbiology and Infection.‏‏</p>
+<p><strong>Date</strong>:   29/1/2017</p>
+<div class="section" id="why-should-i-need-this">
+<h2>Why should I need this?<a class="headerlink" href="#why-should-i-need-this" title="Permalink to this headline">¶</a></h2>
+<p>Whole genome sequencing (WGS) has revolutionized the subtyping of L. pneumophila (Lp) but calling the traditional sequence based type from genomic data is hampered by presence of multiple copies of the mompS locus. We propose a novel bioinformatics solution for rectifying that limitation, ensuring the feasibility of WGS for cluster investigation.</p>
 </div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Download the momps.zip folder to your unix</p>
+</li>
+<li><p class="first">Unzip the momps folder</p>
+</li>
+<li><p class="first">In &#8216;config.txt&#8217;, set the path to blast, bwa, samtools, picard and freebayse</p>
+</li>
+<li><p class="first">cd into the momps folder</p>
+</li>
+<li><p class="first">Run the program as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span class="n">perl</span> <span class="n">All_Extract_MLST_Legionella</span><span class="o">.</span><span class="n">pl</span>   \
+    <span class="o">-</span><span class="n">f</span> <span class="n">forward_fastq_file</span><span class="o">.</span><span class="n">fq</span>   \
+    <span class="o">-</span><span class="n">r</span> <span class="n">reverse_fastq_file</span><span class="o">.</span><span class="n">fq</span>   \
+    <span class="o">-</span><span class="n">a</span> <span class="n">assembly_file</span><span class="o">.</span><span class="n">fasta</span>   \
+    <span class="o">-</span><span class="n">o</span> <span class="n">output_folder_name</span><span class="o">/</span> \
+    <span class="o">-</span><span class="n">p</span> <span class="n">prefix</span>
+</pre></div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+</li>
+</ol>
+<p>Where:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-f</span></kbd></td>
+<td>full path to forward fastq file</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-r</span></kbd></td>
+<td>full path to reverse fastq file</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-a</span></kbd></td>
+<td>full path to assembly fasta file</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-o</span></kbd></td>
+<td>output folder for the results</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-p</span></kbd></td>
+<td>prefix (e.g. sample_1)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li>blast</li>
+<li>bwa</li>
+<li>samtools (version: 1.3.1)</li>
+<li>picard</li>
+<li>freebayse</li>
+<li>perl</li>
 </ul>
+</div>
 </div>
 
 
