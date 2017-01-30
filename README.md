@@ -3,9 +3,9 @@
 Welcome to mompS tool's documentation!
 ====================================================
 
-**Software author**: Dr. Michal Gordon, Bioinformatics Core Facility, Ben-Gurion University
+**Software author**: Dr. Michal Gordon, Bioinformatics Core Facility, Ben-Gurion University, Israel
 
-**PI**: Prof. Jacob Moran-Gilad
+**PI**: Prof. Jacob Moran-Gilad, Faculty of Health Sciences, Ben-Gurion University, Israel
 
 **Citation**: Gordon, M., Yakunin, E., Valinsky, L., Chalifa-Caspi, V., & Moran-Gilad, J. (2017). A Bioinformatics Tool for Ensuring the Backwards Compatibility of Legionella pneumophila Typing in the Genomic Era. Clinical Microbiology and Infection.‏‏
 
