@@ -45,7 +45,7 @@ Where:
 Results
 -------
 
-The analysis results are summarized in the file: prefix.MLST_res.txt
+The analysis results are summarized in file prefix.MLST_res.txt
 
 
 Dependencies
