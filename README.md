@@ -22,14 +22,15 @@ Usage
 1. Download or clone the momps folder to your unix
 2. In 'config.txt', set the path to blast, bwa, samtools, picard and freebayse
 3. cd into the momps folder
-4. Run the program as follows
+4. Run the program as follow:
 
-    ```perl momps.pl   \
+    perl momps.pl   \
         -f forward_fastq_file.fq   \
         -r reverse_fastq_file.fq   \
         -a assembly_file.fasta   \
         -o output_folder_name/ \
-        -p prefix```
+        -p prefix
+
         
     
 Where:
