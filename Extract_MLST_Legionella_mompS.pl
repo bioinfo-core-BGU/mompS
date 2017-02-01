@@ -157,9 +157,9 @@ my $junk = <CONTIG>; # Discard the ">" at the begining of the file
 				
 				$sub_seq = substr $seq, $start - 1, $end - $start+1;
 			}
-			print OUT ">$blastHash->{$header}{$i}\n";
-			print OUT "$sub_seq\n";
-			print OUT "$seq\n";
+			#print OUT ">$blastHash->{$header}{$i}\n";
+			#print OUT "$sub_seq\n";
+			#print OUT "$seq\n";
 			$SBT_hash->{$gene_neme} = $sub_seq;
 		}
 	 }
@@ -170,10 +170,13 @@ my $junk = <CONTIG>; # Discard the ">" at the begining of the file
  my $profile = "mompS".$mompS_ST;
  foreach my $key (@keys){
 	my $print_length = $SBT_hash->{$key};
-	print OUT "$print_length";
+	#print OUT "$print_length";
 	$profile = $profile.$key.$SBT_hash_map->{$key}{$print_length};
  }
- #print "\n";
- print OUT "\n\n";
- print OUT "Profile = $profile\n";
+ 
+ #ST	flaA	pilE	asd	mip	mompS	proA	neuA
+ #Profile = mompS1asd3flaA1mip1neuA1pilE4proA1
+my ($mompS_res,$asd_res,$flaA_res,$mip_res,$neuA_res,$pilE_res,$proA_res) = $profile =~ /mompS(\d*)asd(\d*)flaA(\d*)mip(\d*)neuA(\d*)pilE(\d*)proA(\d*)/;
+ print OUT "\n\n*******MLST results*******\n\n";
+ print OUT "Profile:\nflaA\tpilE\tasd\tmip\tmompS\tproA\tneuA\n$flaA\t$pilE\t$asd\t$mip\t$mompS\t$proA\t$neuA\n";
  print OUT "ST = $ST_hash->{$profile}\n";
