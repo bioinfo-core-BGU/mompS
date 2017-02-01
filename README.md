@@ -35,11 +35,11 @@ Usage
     
 Where:
 
--f        full path to forward fastq file
--r        full path to reverse fastq file
--a        full path to assembly fasta file
--o        output folder for the results
--p        prefix (e.g. sample_1)
+    -f        full path to forward fastq file
+    -r        full path to reverse fastq file
+    -a        full path to assembly fasta file
+    -o        output folder for the results
+    -p        prefix (e.g. sample_1)
 
 
 Results
