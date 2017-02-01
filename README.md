@@ -46,7 +46,7 @@ Results
 -------
 
 * The MLST results are summarized in file prefix.MLST_res.txt
-* The information about "" is in file prefix.consensus.ST_MompS_res.txt
+* The information about mompS "zygosity" is in file prefix.consensus.ST_MompS_res.txt
 
 
 Dependencies
