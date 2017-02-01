@@ -24,12 +24,12 @@ Usage
 3. cd into the momps folder
 4. Run the program as follow:
 
-    perl momps.pl   \
-        -f forward_fastq_file.fq   \
-        -r reverse_fastq_file.fq   \
-        -a assembly_file.fasta   \
-        -o output_folder_name/ \
-        -p prefix
+        perl momps.pl   \
+            -f forward_fastq_file.fq   \
+            -r reverse_fastq_file.fq   \
+            -a assembly_file.fasta   \
+            -o output_folder_name/ \
+            -p prefix
 
         
     
