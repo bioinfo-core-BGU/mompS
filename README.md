@@ -52,9 +52,9 @@ Dependencies
 -------------
 
 
-* blast
-* bwa
-* samtools (version: 1.3.1)
-* picard
-* freebayse
+* blast (ncbi-blast-2.4.0+)
+* bwa (bwa-0.7.5a)
+* samtools (1.3.1)
+* picard (picard-1.139)
+* freebayse (v1.0.2-15-g357f175)
 * perl
