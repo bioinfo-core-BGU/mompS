@@ -1,5 +1,5 @@
 blast_path = /bioinfo_apps/ncbi-blast-2.4.0+/bin
 bwa_path = /bioinfo_apps/bin
 samtools_path = /bioinfo_apps/samtools/bin
-picard = /bioinfo_apps/jre1.8.0_101/bin/java -jar /bioinfo_apps/jars/picard.jar
+picard = /bioinfo_apps/jre1.8.0_73/bin/java -jar /bioinfo_apps/picard-1.139/dist/picard.jar
 freebayse_path = /bioinfo_apps/freebayse/bin
