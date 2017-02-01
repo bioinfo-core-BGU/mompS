@@ -165,7 +165,7 @@ my $junk = <CONTIG>; # Discard the ">" at the begining of the file
 	 }
  }
  
-  print OUT ">Concat_seq\n";
+  #print OUT ">Concat_seq\n";
  my @keys = sort keys %{$SBT_hash};
  my $profile = "mompS".$mompS_ST;
  foreach my $key (@keys){
