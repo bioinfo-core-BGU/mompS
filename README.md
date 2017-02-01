@@ -40,6 +40,13 @@ Where:
 -o        output folder for the results
 -p        prefix (e.g. sample_1)
 
+
+Results
+-------
+
+The analysis results are summarized in the file: prefix.MLST_res.txt
+
+
 Dependencies
 -------------
 
