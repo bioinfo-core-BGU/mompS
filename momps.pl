@@ -10,7 +10,14 @@ GetOptions
 	"a=s"=>\$assembly_fasta # asembly genome 
 	);
 #This script combine the mompS pipe and the MLST of the rest 6 genes
+$outputpath = $outputpath."/";
 
+if (-d $outputpath) {
+    print "$outputpath exists";
+} else {
+    print "$outputpath does not exist! creat it!";
+    `mkdir $outputpath`;
+}
 my $output_blast = $outputpath.$prefix.".BLAST_res.txt";
 my $output_MLST = $outputpath.$prefix.".MLST_res.txt";
 my $log = $outputpath.$prefix.".log";
